@@ -44,6 +44,7 @@ function runGame(gameType) {
 
 }
 
+
 /**
  * Checks the answer against the first element in
  * the returned calculateCorrectAnswer array
@@ -146,8 +147,7 @@ function displayDivisionQuestion(operand1, operand2) {
     document.getElementById('operand1').textContent = operand1;
     document.getElementById('operand2').textContent = operand2; 
     document.getElementById('operator').textContent = "/"; 
-    let newNumbers = operand1 / operand2;
-    if(newNumbers % 2 === 0 ){
+    if (Number.isInteger(operand1 / operand2)){
     } else{
         runGame("division") 
     } 
